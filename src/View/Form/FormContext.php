@@ -144,7 +144,7 @@ class FormContext implements ContextInterface
         }
         foreach ($validator->field($field)->rules() as $rule) {
             if ($rule->get('rule') === 'maxLength') {
-                return $rule->get('pass')[0] ?? null;
+                return isset($rule->get('pass')[0])? $rule->get('pass')[0] : null;
             }
         }
 

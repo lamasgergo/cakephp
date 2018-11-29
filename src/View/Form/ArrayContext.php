@@ -222,7 +222,7 @@ class ArrayContext implements ContextInterface
 
         $fieldSchema = Hash::get($this->_context['schema'], $field);
 
-        if(!$fieldSchema){
+        if (!$fieldSchema) {
             return null;
         }
 
